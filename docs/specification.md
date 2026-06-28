@@ -16,6 +16,7 @@ Beginner friendly
 High performance
 Built for games
 Consistent design
+
 2. Language Philosophy
 
 Bolt follows five principles:
@@ -113,7 +114,63 @@ Not yet designed.
 
 7. Operators
 
-Not yet designed.
+Bolt supports three categories of operators.
+
+### Arithmetic Operators
+
+| Operator | Description        |
+| -------- | ------------------ |
+| `+`      | Addition           |
+| `-`      | Subtraction        |
+| `*`      | Multiplication     |
+| `/`      | Division           |
+| `%`      | Remainder (Modulo) |
+| `^`      | Power              |
+
+Example:
+
+```bolt
+forge total = 10 + 5
+forge speed = 20 / 2
+forge area = 5 ^ 2
+```
+
+---
+
+### Comparison Operators
+
+| Operator | Description              |
+| -------- | ------------------------ |
+| `==`     | Equal to                 |
+| `!=`     | Not equal to             |
+| `>`      | Greater than             |
+| `<`      | Less than                |
+| `>=`     | Greater than or equal to |
+| `<=`     | Less than or equal to    |
+
+Example:
+
+```bolt
+health == 100
+score >= 50
+```
+
+---
+
+### Logical Operators
+
+| Operator | Description |   |            |
+| -------- | ----------- | - | ---------- |
+| `&&`     | Logical AND |   |            |
+| `        |             | ` | Logical OR |
+| `!`      | Logical NOT |   |            |
+
+Example:
+
+```bolt
+alive && hasKey
+!gameOver
+```
 
 8. Conditions
 
