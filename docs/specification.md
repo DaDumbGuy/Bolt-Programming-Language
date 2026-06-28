@@ -383,12 +383,141 @@ hero.jump(15)
 
 12. Modules
 
-Not yet designed.
+Modules allow programs to be split across multiple files.
+
+### Keyword
+
+| Keyword | Purpose |
+|---------|---------|
+| `link` | Imports another Bolt source file |
+
+### Syntax
+
+```bolt
+link "player.bolt"
+link "enemy.bolt"
+link "world.bolt"
+```
+
+### Rules
+
+- `link` must appear before program execution begins.
+- Paths are relative to the current file.
+- A module is loaded only once.
 
 13. Error Handling
 
-Not yet designed.
+Bolt provides structured error handling to prevent programs from crashing unexpectedly.
+
+### Keywords
+
+| Keyword   | Purpose                                              |
+| --------- | ---------------------------------------------------- |
+| `attempt` | Begins a block that may produce an error             |
+| `rescue`  | Handles any error that occurs in the `attempt` block |
+| `always`  | Executes whether an error occurs or not              |
+| `throw`   | Raises a custom error                                |
+
+### Syntax
+
+```bolt
+attempt
+
+    link "save.bolt"
+    loadGame()
+
+rescue
+
+    echo "Failed to load the save file."
+
+always
+
+    echo "Continuing program..."
+
+finish
+```
+
+### Throwing an Error
+
+```bolt
+throw "PlayerNotFound"
+```
+
+### Rules
+
+* Every `attempt` block must end with `finish`.
+* `rescue` is optional.
+* `always` is optional.
+* `always` executes regardless of whether an error occurs.
+* A `throw` statement immediately exits the current `attempt` block.
+
 
 14. Standard Library
 
-Not yet designed.
+Bolt includes a built-in standard library to provide common functionality without requiring external packages.
+
+### Console
+
+| Function  | Purpose           |
+| --------- | ----------------- |
+| `echo()`  | Display text      |
+| `input()` | Read user input   |
+| `clear()` | Clear the console |
+
+### Math
+
+| Function   | Purpose                     |
+| ---------- | --------------------------- |
+| `abs()`    | Absolute value              |
+| `sqrt()`   | Square root                 |
+| `pow()`    | Raise to a power            |
+| `random()` | Generate a random number    |
+| `clamp()`  | Restrict a value to a range |
+
+### Strings
+
+| Function   | Purpose               |
+| ---------- | --------------------- |
+| `length()` | Number of characters  |
+| `upper()`  | Convert to uppercase  |
+| `lower()`  | Convert to lowercase  |
+| `split()`  | Split text into parts |
+| `join()`   | Combine text          |
+
+### Collections
+
+| Function     | Purpose                         |
+| ------------ | ------------------------------- |
+| `push()`     | Add an element                  |
+| `pop()`      | Remove the last element         |
+| `size()`     | Number of elements              |
+| `contains()` | Check whether an element exists |
+
+### Files
+
+| Function   | Purpose                |
+| ---------- | ---------------------- |
+| `read()`   | Read a file            |
+| `write()`  | Write a file           |
+| `exists()` | Check if a file exists |
+
+### Time
+
+| Function  | Purpose             |
+| --------- | ------------------- |
+| `time()`  | Current system time |
+| `sleep()` | Pause execution     |
+
+### Game Development (Planned)
+
+Future versions of Bolt will include built-in support for:
+
+* Graphics
+* Audio
+* Input
+* Physics
+* Networking
+* UI
+* Animation
+* Cameras
+
