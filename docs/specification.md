@@ -285,7 +285,49 @@ Loops allow code to repeat until a condition is met or for a specific number of 
 
 10. Functions
 
-Not yet designed.
+Functions allow reusable blocks of code.
+
+### Keyword
+
+| Keyword | Purpose             |
+| ------- | ------------------- |
+| `spark` | Declares a function |
+
+### Syntax
+
+```bolt
+spark greet(name)
+
+    echo "Hello " + name
+
+finish
+```
+
+Calling a function:
+
+```bolt
+greet("Alex")
+```
+
+### Returning Values
+
+Functions return values using the `return` keyword.
+
+```bolt
+spark add(a, b)
+
+    return a + b
+
+finish
+```
+
+Example:
+
+```bolt
+forge result = add(5, 10)
+echo result
+```
+
 
 11. Objects
 
