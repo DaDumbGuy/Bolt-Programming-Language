@@ -110,7 +110,68 @@ forge alive : truth = true
 
 6. Variables
 
-Not yet designed.
+
+Variables store data that can be used and modified throughout a program.
+
+### Keyword
+
+| Keyword | Purpose                 |
+| ------- | ----------------------- |
+| `forge` | Declares a new variable |
+
+### Variable Declaration
+
+Bolt supports both **type inference** and **explicit typing**.
+
+#### Type Inference
+
+The compiler automatically determines the variable's type.
+
+```bolt
+forge health = 100
+forge speed = 5.5
+forge playerName = "Alex"
+forge alive = true
+```
+
+#### Explicit Typing
+
+The programmer may explicitly specify the variable's type.
+
+```bolt
+forge health : ember = 100
+forge speed : surge = 5.5
+forge playerName : glyph = "Alex"
+forge alive : truth = true
+```
+
+### Variable Naming Rules
+
+* Names must begin with a letter (`A-Z` or `a-z`) or an underscore (`_`).
+* Names may contain letters, numbers, and underscores.
+* Keywords cannot be used as variable names.
+* Variable names are case-sensitive.
+
+### Reassigning Variables
+
+A variable's value can be changed after it has been created.
+
+```bolt
+forge score = 0
+
+score = 10
+score = score + 5
+```
+
+### Examples
+
+```bolt
+forge playerHealth = 100
+forge playerSpeed = 6.5
+forge playerName = "Bolt"
+forge gameRunning = true
+```
+
 
 7. Operators
 
@@ -211,7 +272,16 @@ finish
 
 9. Loops
 
-Not yet designed.
+
+Loops allow code to repeat until a condition is met or for a specific number of times.
+
+### Keywords
+
+| Keyword  | Purpose  |
+| -------- | -------- |
+| `repeat` | Repeat a |
+
+
 
 10. Functions
 
