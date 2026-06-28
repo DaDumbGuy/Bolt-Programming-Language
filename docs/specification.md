@@ -331,7 +331,55 @@ echo result
 
 11. Objects
 
-Not yet designed.
+Objects group related data and behavior into a single reusable type.
+
+### Keyword
+
+| Keyword | Purpose                    |
+| ------- | -------------------------- |
+| `craft` | Declares a new object type |
+
+### Syntax
+
+```bolt
+craft Player
+
+    forge health = 100
+    forge speed = 5
+
+    spark jump(force)
+
+        echo "Jumping with " + force
+
+    finish
+
+finish
+```
+
+### Creating an Object
+
+Objects are created using the `forge` keyword.
+
+```bolt
+forge hero = Player()
+```
+
+### Accessing Members
+
+Use the dot (`.`) operator to access properties and methods.
+
+```bolt
+hero.health = 80
+hero.jump(15)
+```
+
+### Rules
+
+* Every object begins with `craft`.
+* Objects may contain variables and functions.
+* Objects end with `finish`.
+* Objects may be instantiated using `forge`.
+
 
 12. Modules
 
