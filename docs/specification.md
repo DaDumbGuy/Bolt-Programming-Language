@@ -70,7 +70,42 @@ They will be added after community discussion and design.
 
 5. Data Types
 
-Not yet designed.
+Bolt uses a hybrid type system.
+
+By default, Bolt automatically determines the data type of a variable (type inference). Developers may also explicitly specify a data type when greater control or readability is desired.
+
+### Built-in Data Types
+
+| Type    | Purpose                           |
+| ------- | --------------------------------- |
+| `ember` | Whole numbers                     |
+| `surge` | Decimal numbers                   |
+| `glyph` | Text                              |
+| `truth` | Boolean values (`true` / `false`) |
+| `vault` | Collection of values              |
+| `form`  | User-defined object or type       |
+| `empty` | Represents no value               |
+
+### Examples
+
+Automatic type inference:
+
+```bolt
+forge health = 100
+forge speed = 5.5
+forge player = "Alex"
+forge alive = true
+```
+
+Explicit typing:
+
+```bolt
+forge health : ember = 100
+forge speed : surge = 5.5
+forge player : glyph = "Alex"
+forge alive : truth = true
+```
+
 
 6. Variables
 
