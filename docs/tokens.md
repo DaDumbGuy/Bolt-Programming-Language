@@ -13,3 +13,83 @@
 | Dot         | `.`                       |
 | Comma       | `,`                       |
 | End of File | `EOF`                     |
+
+# Bolt Tokens
+
+## Keywords
+
+- forge
+- spark
+- craft
+- ignite
+- pulse
+- when
+- otherwise
+- finally
+- repeat
+- during
+- forever
+- each
+- link
+- attempt
+- rescue
+- always
+- throw
+- finish
+- echo
+
+---
+
+## Operators
+
++
+-
+*
+/
+%
+^
+
+==
+!=
+>
+<
+>=
+<=
+
+&&
+||
+!
+
+=
+
+.
+
+:
+
+,
+
+()
+
+---
+
+## Literals
+
+Integer
+
+Decimal
+
+String
+
+Boolean
+
+---
+
+## Identifiers
+
+Variable names
+
+Function names
+
+Object names
+
+Module names
