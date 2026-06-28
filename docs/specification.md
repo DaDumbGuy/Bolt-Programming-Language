@@ -172,9 +172,42 @@ alive && hasKey
 !gameOver
 ```
 
-8. Conditions
+ 8. Conditions
 
-Not yet designed.
+Bolt uses a natural-language inspired conditional system.
+
+### Keywords
+
+| Keyword     | Purpose                                             |
+| ----------- | --------------------------------------------------- |
+| `when`      | Starts a conditional block                          |
+| `otherwise` | Checks another condition if the previous one failed |
+| `finally`   | Executes when no previous conditions are true       |
+
+### Syntax
+
+```bolt
+when health <= 0
+
+    echo "Game Over"
+
+otherwise health < 50
+
+    echo "Low Health"
+
+finally
+    echo "Healthy"
+
+finish
+```
+
+### Rules
+
+* Every conditional block begins with `when`.
+* Additional conditions use `otherwise`.
+* The final fallback uses `finally`.
+* Every conditional block ends with `finish`.
+
 
 9. Loops
 
